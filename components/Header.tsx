@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import Toggle from "./ThemeToggle";
 
-type Props = {}
+type Props = {};
 
 const Header: React.FC<Props> = (props: Props) => {
   return (
-      <div>Header</div>
-  )
-}
+    <div>
+      Header <Toggle />
+    </div>
+  );
+};
 
-export default Header
+export default Header;
