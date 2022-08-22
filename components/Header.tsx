@@ -55,31 +55,40 @@ const Header: React.FC<Props> = (props: Props) => {
     }
   };
   return (
-    <div className="w-[80%] my-2 max-w-2xl flex justify-between items-center">
+    <div className="w-[80%] my-4 max-w-2xl flex justify-between items-center">
       <div className="flex items-center">
         <GoTerminal size={32} />
         <span className="text-lg ml-2 font-mono">dan_michell</span>
       </div>
       <div className="flex items-center gap-3">
-        <p>About</p>
-        <p>Work</p>
-        <p>Source</p>
-        <div className="p-1 border-[1px] rounded-xl">
-          {renderThemeChanger()}
+        <div className="sm:flex items-center gap-3 hidden">
+          <button className="hover:scale-110 transition-all duration-200">
+            About
+          </button>
+          <button className="hover:scale-110 transition-all duration-200">
+            Work
+          </button>
         </div>
-        {/* <div
-          className="p-1 border-[1px] rounded-xl"
+        <div
+          className="p-[12px] border-[1px] rounded-xl sm:hidden block"
           onClick={() => {
             setDropdown(!dropdown);
           }}
         >
-          <FiMenu size={28} />
+          <FiMenu size={18} />
           <div
             className={`absolute right-[60px] h-10 w-52 ${
               dropdown ? "border-2" : "hidden"
             }`}
           ></div>
-        </div> */}
+        </div>
+        <button
+          className={
+            "p-2 rounded-xl bg-slate-800 text-gray-200 dark:bg-orange-300 dark:text-gray-900"
+          }
+        >
+          {renderThemeChanger()}
+        </button>
       </div>
     </div>
   );
