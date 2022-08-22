@@ -2,25 +2,22 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Header from "../components/Header";
 import { AnimatePresence } from "framer-motion";
-import { ThemeProvider } from "../components/ThemeContext";
-import Background from "../components/Background";
+import { ThemeProvider } from "next-themes";
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (
-    <>
-      <ThemeProvider initialTheme="dark">
-        <Background>
-          <Header />
-          <AnimatePresence
-            exitBeforeEnter
-            initial={false}
-            onExitComplete={() => window.scrollTo(0, 0)}
-          >
-            <Component {...pageProps} key={router.route} />
-          </AnimatePresence>
-        </Background>
-      </ThemeProvider>
-    </>
+    <ThemeProvider enableSystem={true} attribute="class">
+      <div className="flex flex-col items-center">
+        <Header />
+        <AnimatePresence
+          exitBeforeEnter
+          initial={false}
+          onExitComplete={() => window.scrollTo(0, 0)}
+        >
+          <Component {...pageProps} key={router.route} />
+        </AnimatePresence>
+      </div>
+    </ThemeProvider>
   );
 }
 
