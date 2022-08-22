@@ -3,6 +3,7 @@ import { useTheme } from "next-themes";
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 import { GoTerminal } from "react-icons/go";
 import { FiMenu } from "react-icons/fi";
+import { AiFillGithub } from "react-icons/ai";
 import { render } from "react-dom";
 import { MotionConfig } from "framer-motion";
 import { AnimatePresence, motion } from "framer-motion";
@@ -55,36 +56,76 @@ const Header: React.FC<Props> = (props: Props) => {
     }
   };
   return (
-    <div className="w-[80%] my-4 max-w-2xl flex justify-between items-center">
+    <div className="sm:w-[80%] w-full px-4 sm:px-0 my-4 max-w-2xl flex justify-between items-center">
       <div className="flex items-center">
         <GoTerminal size={32} />
-        <span className="text-lg ml-2 font-mono">dan_michell</span>
+        <span className="text-lg ml-2 font-mono font-semibold">
+          dan_michell
+        </span>
       </div>
-      <div className="flex items-center gap-3">
-        <div className="sm:flex items-center gap-3 hidden">
+      <div className="flex items-center gap-4">
+        <div className="sm:flex items-center gap-4 hidden">
           <button className="hover:scale-110 transition-all duration-200">
             About
           </button>
           <button className="hover:scale-110 transition-all duration-200">
             Work
           </button>
+          <button className="hover:scale-110 transition-all duration-200">
+            Contact
+          </button>
+          <button className="hover:scale-110 transition-all duration-200 flex gap-1">
+            Source
+            <AiFillGithub size={22} />
+          </button>
         </div>
-        <div
-          className="p-[12px] border-[1px] rounded-xl sm:hidden block"
-          onClick={() => {
-            setDropdown(!dropdown);
-          }}
-        >
-          <FiMenu size={18} />
-          <div
-            className={`absolute right-[60px] h-10 w-52 ${
-              dropdown ? "border-2" : "hidden"
-            }`}
-          ></div>
+        <div className="flex justify-center sm:hidden">
+          <div>
+            <div className="relative">
+              <button
+                onClick={() => {
+                  setDropdown(!dropdown);
+                }}
+                onBlur={() => {
+                  setDropdown(false);
+                }}
+                className="p-[12px] border-[1px] rounded-xl hover:dark:bg-gray-800 hover:bg-gray-100"
+              >
+                <FiMenu size={18} />
+              </button>
+              <ul
+                className={`absolute ${
+                  dropdown ? "" : "hidden"
+                } py-2 border-[1px] dark:border-gray-800 list-none rounded-lg shadow-lg mt-2 left-[-90px] w-48 dark:bg-gray-900`}
+              >
+                <li>
+                  <button className="text-sm  px-6 w-full hover:scale-110 transition-all duration-200">
+                    About
+                  </button>
+                </li>
+                <li>
+                  <button className="text-sm px-6 mt-3 w-full hover:scale-110 transition-all duration-200">
+                    Work
+                  </button>
+                </li>
+                <li>
+                  <button className="text-sm px-6 mt-3 w-full hover:scale-110 transition-all duration-200">
+                    Contact
+                  </button>
+                </li>
+                <li>
+                  <button className="text-sm px-6 mt-3 w-full flex gap-1 items-center justify-center hover:scale-110 transition-all duration-200">
+                    Source
+                    <AiFillGithub size={22} />
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
         <button
           className={
-            "p-2 rounded-xl bg-slate-800 text-gray-200 dark:bg-orange-300 dark:text-gray-900"
+            "p-2 rounded-xl bg-slate-800 text-gray-200 dark:bg-orange-300 dark:text-gray-900 hover:bg-slate-900 hover:dark:bg-orange-200"
           }
         >
           {renderThemeChanger()}
