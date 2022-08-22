@@ -33,7 +33,7 @@ const Header: React.FC<Props> = (props: Props) => {
           transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
         >
           <MdOutlineLightMode
-            size={28}
+            size={22}
             onClick={() => {
               setTheme("light");
             }}
@@ -46,7 +46,7 @@ const Header: React.FC<Props> = (props: Props) => {
           transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
         >
           <MdOutlineDarkMode
-            size={28}
+            size={22}
             onClick={() => {
               setTheme("dark");
             }}
@@ -65,24 +65,25 @@ const Header: React.FC<Props> = (props: Props) => {
       </div>
       <div className="flex items-center gap-4">
         <div className="sm:flex items-center gap-4 hidden">
-          <button className="hover:scale-110 transition-all duration-200">
+          <button className="hover:scale-110 text-sm transition-all duration-200">
             About
           </button>
-          <button className="hover:scale-110 transition-all duration-200">
+          <button className="hover:scale-110 text-sm transition-all duration-200">
             Work
           </button>
-          <button className="hover:scale-110 transition-all duration-200">
+          <button className="hover:scale-110 text-sm transition-all duration-200">
             Contact
           </button>
-          <button className="hover:scale-110 transition-all duration-200 flex gap-1">
+          <button className="hover:scale-110 text-sm transition-all duration-200">
             <a
+              className="flex gap-1 items-center"
               href="https://github.com/dan-michell/min-page"
               target="_blank"
               rel="noreferrer"
             >
               Source
+              <AiFillGithub size={22} />
             </a>
-            <AiFillGithub size={22} />
           </button>
         </div>
         <div className="flex justify-center sm:hidden">
@@ -95,9 +96,9 @@ const Header: React.FC<Props> = (props: Props) => {
                 // onBlur={() => {
                 //   setDropdown(false);
                 // }}
-                className="p-[12px] border-[1px] dark:border-gray-700 rounded-xl hover:dark:bg-gray-800 hover:bg-gray-100"
+                className="p-[11px] border-[1px] dark:border-gray-700 rounded-xl hover:dark:bg-gray-800 hover:bg-gray-100"
               >
-                <FiMenu size={18} />
+                <FiMenu size={16} />
               </button>
               <ul
                 className={`absolute ${
