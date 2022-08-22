@@ -75,7 +75,13 @@ const Header: React.FC<Props> = (props: Props) => {
             Contact
           </button>
           <button className="hover:scale-110 transition-all duration-200 flex gap-1">
-            Source
+            <a
+              href="https://github.com/dan-michell/min-page"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Source
+            </a>
             <AiFillGithub size={22} />
           </button>
         </div>
@@ -86,17 +92,17 @@ const Header: React.FC<Props> = (props: Props) => {
                 onClick={() => {
                   setDropdown(!dropdown);
                 }}
-                onBlur={() => {
-                  setDropdown(false);
-                }}
-                className="p-[12px] border-[1px] rounded-xl hover:dark:bg-gray-800 hover:bg-gray-100"
+                // onBlur={() => {
+                //   setDropdown(false);
+                // }}
+                className="p-[12px] border-[1px] dark:border-gray-700 rounded-xl hover:dark:bg-gray-800 hover:bg-gray-100"
               >
                 <FiMenu size={18} />
               </button>
               <ul
                 className={`absolute ${
                   dropdown ? "" : "hidden"
-                } py-2 border-[1px] dark:border-gray-800 list-none rounded-lg shadow-lg mt-2 left-[-90px] w-48 dark:bg-gray-900`}
+                } py-2 border-[1px] dark:border-gray-700 list-none rounded-lg shadow-lg mt-2 left-[-90px] w-48 dark:bg-gray-900`}
               >
                 <li>
                   <button className="text-sm  px-6 w-full hover:scale-110 transition-all duration-200">
@@ -114,9 +120,16 @@ const Header: React.FC<Props> = (props: Props) => {
                   </button>
                 </li>
                 <li>
-                  <button className="text-sm px-6 mt-3 w-full flex gap-1 items-center justify-center hover:scale-110 transition-all duration-200">
-                    Source
-                    <AiFillGithub size={22} />
+                  <button className="text-sm px-6 mt-3 w-full flex justify-center hover:scale-110 transition-all duration-200">
+                    <a
+                      className="flex gap-1 items-center"
+                      href="https://github.com/dan-michell/min-page"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Source
+                      <AiFillGithub size={22} />
+                    </a>
                   </button>
                 </li>
               </ul>
