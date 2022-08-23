@@ -8,7 +8,7 @@ import { SiCodewars } from "react-icons/si";
 
 type Props = {};
 
-const Links = (props: Props) => {
+const Links: React.FC<Props> = (props: Props) => {
   return (
     <div className="flex gap-5 mt-2">
       <a

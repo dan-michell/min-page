@@ -11,7 +11,7 @@ const variants = {
   exit: { opacity: 0, x: 0, y: -100 },
 };
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
   return (
     <motion.main
       initial="hidden"

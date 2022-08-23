@@ -5,7 +5,10 @@ interface Props extends LinkProps {
   children: ReactNode;
 }
 
-const NoScrollLink = ({ children, href }: Props): JSX.Element => (
+const NoScrollLink: React.FC<Props> = ({
+  children,
+  href,
+}: Props): JSX.Element => (
   <Link href={href} scroll={false}>
     {children}
   </Link>

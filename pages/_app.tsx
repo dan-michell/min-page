@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { AnimatePresence } from "framer-motion";
 import { ThemeProvider } from "next-themes";
 
@@ -16,6 +17,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
         >
           <Component {...pageProps} key={router.route} />
         </AnimatePresence>
+        <Footer />
       </div>
     </ThemeProvider>
   );
