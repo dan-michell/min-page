@@ -4,9 +4,7 @@ import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 import { GoTerminal } from "react-icons/go";
 import { FiMenu } from "react-icons/fi";
 import { AiFillGithub } from "react-icons/ai";
-import { render } from "react-dom";
-import { MotionConfig } from "framer-motion";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 type Props = {};
 
@@ -59,22 +57,19 @@ const Header: React.FC<Props> = (props: Props) => {
     <div className="sm:w-[80%] w-full px-4 sm:px-0 my-4 max-w-2xl flex justify-between items-center">
       <div className="flex items-center">
         <GoTerminal size={32} />
-        <span className="text-lg ml-2 font-mono font-semibold">
+        <span className="text-xl ml-2 font-mono font-semibold">
           dan_michell
         </span>
       </div>
       <div className="flex items-center gap-4">
         <div className="sm:flex items-center gap-4 hidden">
-          <button className="hover:scale-110 text-sm transition-all duration-200">
-            About
-          </button>
-          <button className="hover:scale-110 text-sm transition-all duration-200">
+          <button className="hover:scale-110 transition-all duration-200">
             Work
           </button>
-          <button className="hover:scale-110 text-sm transition-all duration-200">
+          <button className="hover:scale-110 transition-all duration-200">
             Contact
           </button>
-          <button className="hover:scale-110 text-sm transition-all duration-200">
+          <button className="hover:scale-110 transition-all duration-200">
             <a
               className="flex gap-1 items-center"
               href="https://github.com/dan-michell/min-page"
