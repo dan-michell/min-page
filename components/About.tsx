@@ -4,7 +4,7 @@ type Props = {};
 
 const About: React.FC<Props> = (props: Props) => {
   return (
-    <div className="w-[90%] sm:w-auto mt-4">
+    <div id="about" className="w-[90%] sm:w-auto mt-8">
       <h1 className="sm:text-2xl text-xl font-bold border-b-2 w-fit mb-2">
         About
       </h1>
@@ -22,7 +22,9 @@ const About: React.FC<Props> = (props: Props) => {
           target="_blank"
           rel="noreferrer"
         >
-          <a href="https://www.sigmalabs.co.uk/">Sigma Labs</a>
+          <a href="https://www.sigmalabs.co.uk/" className="">
+            Sigma Labs
+          </a>
         </span>{" "}
         I have had experience with a variety of technologies to facilitate
         full-stack development along with working as part of an agile team. I am

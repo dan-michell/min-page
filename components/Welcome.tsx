@@ -8,27 +8,9 @@ const Welcome: React.FC<Props> = (props: Props) => {
 
   return (
     <div className="my-8 w-[90%] sm:w-auto">
-      <div
-        className={`animate-wave text-7xl w-20 origin-bottom-right absolute right-[145px] top-[66px] ${
-          wave
-            ? "opacity-100 transition-opacity duration-500"
-            : "opacity-0 transition-opacity duration-700"
-        }`}
-      >
-        👋
-      </div>
-      <h1
-        onMouseEnter={(e) => {
-          setWave(true);
-        }}
-        onMouseLeave={(e) => {
-          setWave(false);
-        }}
-        className="font-semibold sm:text-9xl text-8xl"
-      >
-        Hello!
+      <h1 className="font-semibold sm:text-9xl text-8xl">
+        Hello! <br /> I'm Dan.
       </h1>
-      <h1 className="font-semibold sm:text-9xl text-8xl">I'm Dan.</h1>
       <h3 className="font-extralight sm:text-2xl text-xl flex flex-wrap text-left sm:w-auto">
         Junior Software / Data Engineer.
       </h3>

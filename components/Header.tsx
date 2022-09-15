@@ -64,10 +64,10 @@ const Header: React.FC<Props> = (props: Props) => {
       <div className="flex items-center gap-4">
         <div className="sm:flex items-center gap-4 hidden">
           <button className="hover:scale-110 transition-all duration-200">
-            Work
+            <a href="#work">Work</a>
           </button>
           <button className="hover:scale-110 transition-all duration-200">
-            Contact
+            <a href="#contact">Contact</a>
           </button>
           <button className="hover:scale-110 transition-all duration-200">
             <a
@@ -91,28 +91,28 @@ const Header: React.FC<Props> = (props: Props) => {
                 // onBlur={() => {
                 //   setDropdown(false);
                 // }}
-                className="p-[11px] border-[1px] dark:border-gray-700 rounded-xl hover:dark:bg-gray-800 hover:bg-gray-100"
+                className="p-[11px] border-[1px] dark:border-gray-700 rounded-xl hover:dark:bg-gray-900 hover:bg-gray-100"
               >
                 <FiMenu size={16} />
               </button>
               <ul
                 className={`absolute ${
                   dropdown ? "" : "hidden"
-                } py-2 border-[1px] dark:border-gray-700 list-none rounded-lg shadow-lg mt-2 left-[-90px] w-48 dark:bg-gray-900`}
+                } py-2 border-[1px] dark:border-gray-700 list-none rounded-lg shadow-lg mt-2 left-[-90px] w-48`}
               >
                 <li>
                   <button className="text-sm  px-6 w-full hover:scale-110 transition-all duration-200">
-                    About
+                    <a href="#about">About</a>
                   </button>
                 </li>
                 <li>
                   <button className="text-sm px-6 mt-3 w-full hover:scale-110 transition-all duration-200">
-                    Work
+                    <a href="#work">Work</a>
                   </button>
                 </li>
                 <li>
                   <button className="text-sm px-6 mt-3 w-full hover:scale-110 transition-all duration-200">
-                    Contact
+                    <a href="#contact">Contact</a>
                   </button>
                 </li>
                 <li>
