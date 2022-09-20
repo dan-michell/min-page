@@ -1,5 +1,6 @@
 import React from "react";
 import NoScrollLink from "./NoScrollLink";
+import WorkCard from "./WorkCard";
 
 type Props = {};
 
@@ -15,11 +16,14 @@ const Work: React.FC<Props> = (props: Props) => {
         also enjoy the art of web design and applications of machine learning
         which can be seen from examples of my other projects.{" "}
       </p>
-      <h3 className="sm:text-lg font-semibold text-md w-fit mt-4">
+      <h3 className="sm:text-lg font-semibold text-md w-fit mt-6">
         Featured Projects
       </h3>
+      <div className="flex justify-center mt-6">
+        <WorkCard />
+      </div>
       <NoScrollLink href="/work">
-        <button className="bg-[#1cb955] self-center text-sm rounded-lg px-4 py-2 border-2 hover:scale-105 transition-all duration-200 dark:border-gray-800">
+        <button className="bg-[#1cb955] self-center text-sm rounded-lg px-4 py-2 border-2 hover:scale-105 transition-all duration-200 dark:border-gray-800 mt-6">
           Further Examples
         </button>
       </NoScrollLink>
