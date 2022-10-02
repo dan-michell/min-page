@@ -16,7 +16,6 @@ const Home: NextPage = () => {
           <Welcome />
           <About />
           <Work />
-          <Contact />
         </div>
       </div>
     </Layout>
