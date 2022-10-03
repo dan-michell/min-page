@@ -5,6 +5,7 @@ import { GoTerminal } from "react-icons/go";
 import { FiMenu } from "react-icons/fi";
 import { AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
+import NoScrollLink from "./NoScrollLink";
 
 type Props = {};
 
@@ -55,19 +56,24 @@ const Header: React.FC<Props> = (props: Props) => {
   };
   return (
     <div className="sm:w-[80%] w-full px-4 sm:px-0 my-4 max-w-2xl flex justify-between items-center">
-      <div className="flex items-center">
-        <GoTerminal size={32} />
-        <span className="text-xl ml-2 font-mono font-semibold">
-          dan_michell
-        </span>
-      </div>
+      <NoScrollLink href="/">
+        <button>
+          <div className="flex items-center">
+            <GoTerminal size={32} />
+            <span className="text-xl ml-2 font-mono font-semibold">
+              dan_michell
+            </span>
+          </div>
+        </button>
+      </NoScrollLink>
+
       <div className="flex items-center gap-4">
         <div className="sm:flex items-center gap-4 hidden">
           <button className="hover:scale-110 transition-all duration-200">
-            <a href="#work">Work</a>
+            <a href="#blog">Blog</a>
           </button>
           <button className="hover:scale-110 transition-all duration-200">
-            <a href="#contact">Contact</a>
+            <a href="#work">Work</a>
           </button>
           <button className="hover:scale-110 transition-all duration-200">
             <a
@@ -98,21 +104,16 @@ const Header: React.FC<Props> = (props: Props) => {
               <ul
                 className={`absolute ${
                   dropdown ? "" : "hidden"
-                } py-2 border-[1px] dark:border-gray-700 list-none rounded-lg shadow-lg mt-2 left-[-90px] w-48`}
+                } py-2 border-[1px] bg-black dark:border-gray-700 list-none rounded-lg shadow-lg mt-2 left-[-90px] w-48`}
               >
                 <li>
                   <button className="text-sm  px-6 w-full hover:scale-110 transition-all duration-200">
-                    <a href="#about">About</a>
+                    <a href="#blog">Blog</a>
                   </button>
                 </li>
                 <li>
                   <button className="text-sm px-6 mt-3 w-full hover:scale-110 transition-all duration-200">
                     <a href="#work">Work</a>
-                  </button>
-                </li>
-                <li>
-                  <button className="text-sm px-6 mt-3 w-full hover:scale-110 transition-all duration-200">
-                    <a href="#contact">Contact</a>
                   </button>
                 </li>
                 <li>
