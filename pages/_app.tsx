@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       <div className="flex flex-col items-center">
         <Header />
         <AnimatePresence
-          exitBeforeEnter
+          mode="wait"
           initial={false}
           onExitComplete={() => window.scrollTo(0, 0)}
         >

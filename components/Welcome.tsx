@@ -20,10 +20,12 @@ const Welcome: React.FC<Props> = (props: Props) => {
           />
         </div> */}
       </h1>
-      <h3 className="font-extralight sm:text-2xl text-xl flex flex-wrap text-left sm:w-auto">
-        Junior Software / Data Engineer.
-      </h3>
-      <Links />
+      <div className=" ml-2">
+        <h3 className="font-extralight sm:text-2xl text-xl flex flex-wrap text-left sm:w-auto">
+          Software / Data Engineer.
+        </h3>
+        <Links />
+      </div>
     </div>
   );
 };
