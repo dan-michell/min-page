@@ -2,16 +2,13 @@ import Link, { LinkProps } from "next/link";
 import React, { ReactNode } from "react";
 
 interface Props extends LinkProps {
-  children: ReactNode;
+	children: ReactNode;
 }
 
-const NoScrollLink: React.FC<Props> = ({
-  children,
-  href,
-}: Props): JSX.Element => (
-  <Link href={href} scroll={false}>
-    {children}
-  </Link>
+const NoScrollLink: React.FC<Props> = ({ children, href }: Props): JSX.Element => (
+	<Link href={href} scroll={false}>
+		{children}
+	</Link>
 );
 
 export default NoScrollLink;
