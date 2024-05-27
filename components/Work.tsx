@@ -7,14 +7,14 @@ type Props = {};
 const Work: React.FC<Props> = (props: Props) => {
 	return (
 		<div id="work" className="w-[90%] sm:w-auto mt-12 flex flex-col">
-			<h1 className="sm:text-2xl text-xl font-bold w-fit mb-2">Work</h1>
+			<h1 className="sm:text-2xl text-xl font-bold w-fit mb-2">What am I up to? </h1>
 			<p className="font-light text-justify">
 				Currently working as a Data Engineer my focus is on creating and maintaining
 				scalable and efficient data pipelines. Along with this I also enjoy the art of web
 				design and applications of machine learning which can be seen from examples of my
 				other projects.{" "}
 			</p>
-			<h3 className="sm:text-lg font-semibold text-md w-fit mt-6">Featured Projects</h3>
+			<h3 className="sm:text-lg font-semibold text-md w-fit mt-6">Featured Posts</h3>
 			<div className="flex justify-center mt-6">
 				<WorkCard />
 			</div>

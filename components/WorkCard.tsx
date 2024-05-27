@@ -1,14 +1,14 @@
 import React from "react";
 
 type Props = {
-  //   imgSrc: string;
-  //   title: string;
-  //   description: string;
-  //   technologies: string[];
+	//   imgSrc: string;
+	//   title: string;
+	//   description: string;
+	//   technologies: string[];
 };
 
 const WorkCard: React.FC<Props> = (props: Props) => {
-  return <div className="border-2 w-[95%] h-[250px] rounded-lg">Carousel</div>;
+	return <div className="border-2 w-[95%] h-[250px] rounded-lg">Post</div>;
 };
 
 export default WorkCard;

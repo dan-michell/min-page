@@ -52,8 +52,9 @@ const Header: React.FC<Props> = (props: Props) => {
 			);
 		}
 	};
+
 	return (
-		<div className="sm:w-[80%] w-full px-4 sm:px-0 my-4 max-w-2xl flex justify-between items-center">
+		<div className="w-full sm:max-w-[80%] px-4 sm:px-0 my-4 flex justify-between items-center">
 			<NoScrollLink href="/">
 				<button>
 					<div className="flex items-center">

@@ -7,21 +7,21 @@ import { AnimatePresence } from "framer-motion";
 import { ThemeProvider } from "next-themes";
 
 function MyApp({ Component, pageProps, router }: AppProps) {
-  return (
-    <ThemeProvider enableSystem={true} attribute="class">
-      <div className="flex flex-col items-center">
-        <Header />
-        <AnimatePresence
-          mode="wait"
-          initial={false}
-          onExitComplete={() => window.scrollTo(0, 0)}
-        >
-          <Component {...pageProps} key={router.route} />
-        </AnimatePresence>
-        <Footer />
-      </div>
-    </ThemeProvider>
-  );
+	return (
+		<ThemeProvider enableSystem={true} attribute="class">
+			<div className="flex flex-col items-center h-screen justify-between">
+				<Header />
+				<AnimatePresence
+					mode="wait"
+					initial={false}
+					onExitComplete={() => window.scrollTo(0, 0)}
+				>
+					<Component {...pageProps} key={router.route} />
+				</AnimatePresence>
+				<Footer />
+			</div>
+		</ThemeProvider>
+	);
 }
 
 export default MyApp;
