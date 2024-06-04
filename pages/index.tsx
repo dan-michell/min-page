@@ -11,8 +11,8 @@ import Blog from "../components/Blog";
 const Home: NextPage = () => {
 	return (
 		<Layout>
-			<div className="w-full flex justify-center">
-				<div className="sm:w-[75%] min-w-[90%] sm:min-w-0 px-4 sm:px-0 max-w-xl flex flex-col items-center sm:items-start">
+			<div className="flex justify-center">
+				<div className="sm:max-w-[600px] flex flex-col items-center sm:items-start">
 					<Welcome />
 					<About />
 					<Work />
