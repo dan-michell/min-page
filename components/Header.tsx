@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import { MdOutlineLightMode, MdOutlineDarkMode, MdOutlineDirectionsBike } from "react-icons/md";
+import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
 import { AiFillGithub } from "react-icons/ai";
+import { PiPersonSimpleBike } from "react-icons/pi";
 import { motion } from "framer-motion";
 import NoScrollLink from "./NoScrollLink";
 
@@ -57,7 +58,7 @@ const Header: React.FC<Props> = (props: Props) => {
 			<NoScrollLink href="/">
 				<button>
 					<div className="flex items-center">
-						<MdOutlineDirectionsBike size={32} />
+						<PiPersonSimpleBike size={32} />
 						<span className="text-xl ml-2 font-mono font-semibold">dan_michell</span>
 					</div>
 				</button>
