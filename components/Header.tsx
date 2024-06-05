@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
-import { GoTerminal } from "react-icons/go";
+import { MdOutlineLightMode, MdOutlineDarkMode, MdOutlineDirectionsBike } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
 import { AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
@@ -54,11 +53,11 @@ const Header: React.FC<Props> = (props: Props) => {
 	};
 
 	return (
-		<div className="w-full sm:max-w-[800px] px-4 sm:px-0 my-4 flex justify-between items-center">
+		<div className="w-full sm:max-w-[800px] px-4 sm:px-0 py-3 flex justify-between items-center sticky top-0 z-50 backdrop-blur-lg">
 			<NoScrollLink href="/">
 				<button>
 					<div className="flex items-center">
-						<GoTerminal size={32} />
+						<MdOutlineDirectionsBike size={32} />
 						<span className="text-xl ml-2 font-mono font-semibold">dan_michell</span>
 					</div>
 				</button>

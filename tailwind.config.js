@@ -22,6 +22,10 @@ module.exports = {
           "100%": { transform: "rotate(0deg)" },
         },
       },
+      colors: {
+        'darkish': '#333333',
+        'lightish': '#DDDDDD'
+      }
     },
   },
 

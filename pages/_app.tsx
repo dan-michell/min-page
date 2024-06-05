@@ -9,7 +9,7 @@ import { ThemeProvider } from "next-themes";
 function MyApp({ Component, pageProps, router }: AppProps) {
 	return (
 		<ThemeProvider enableSystem={true} attribute="class">
-			<div className="flex flex-col items-center min-h-screen justify-between">
+			<div className="flex flex-col items-center max-h-screen overflow-scroll justify-between dark:bg-darkish bg-lightish dark:text-lightish text-darkish">
 				<Header />
 				<AnimatePresence
 					mode="wait"
