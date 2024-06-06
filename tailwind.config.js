@@ -23,8 +23,10 @@ module.exports = {
         },
       },
       colors: {
-        'darkish': '#333333',
-        'lightish': '#DDDDDD'
+        'darkish': '#121212',
+        'darkish-highlight': '#1c1c1c',
+        'lightish': '#DDDDDD',
+        'lightish-highlight': '#d4d4d4'
       }
     },
   },

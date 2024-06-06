@@ -5,7 +5,6 @@ import NoScrollLink from "../components/NoScrollLink";
 import Layout from "../components/Layout";
 import Welcome from "../components/Welcome";
 import About from "../components/About";
-import Work from "../components/Work";
 import Blog from "../components/Blog";
 
 const Home: NextPage = () => {
@@ -15,7 +14,6 @@ const Home: NextPage = () => {
 				<div className="sm:max-w-[600px] flex flex-col items-center sm:items-start">
 					<Welcome />
 					<About />
-					<Work />
 				</div>
 			</div>
 		</Layout>

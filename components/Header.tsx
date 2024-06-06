@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
 import { AiFillGithub } from "react-icons/ai";
@@ -31,34 +32,24 @@ const Header: React.FC<Props> = (props: Props) => {
 					animate={{ rotate: 180 }}
 					transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
 				>
-					<MdOutlineLightMode
-						size={22}
-						onClick={() => {
-							setTheme("light");
-						}}
-					/>
+					<MdOutlineLightMode size={22} />
 				</motion.div>
 			);
 		} else {
 			return (
 				<motion.div transition={{ duration: 0.3, type: "spring", stiffness: 100 }}>
-					<MdOutlineDarkMode
-						size={22}
-						onClick={() => {
-							setTheme("dark");
-						}}
-					/>
+					<MdOutlineDarkMode size={22} />
 				</motion.div>
 			);
 		}
 	};
 
 	return (
-		<div className="w-full sm:max-w-[800px] px-4 sm:px-0 py-3 flex justify-between items-center sticky top-0 z-50 backdrop-blur-lg">
+		<div className="w-full sm:max-w-[900px] px-4 py-3 flex justify-between items-center sticky top-0 z-50 backdrop-blur-lg">
 			<NoScrollLink href="/">
 				<button>
 					<div className="flex items-center">
-						<PiPersonSimpleBike size={32} />
+						<PiPersonSimpleBike size={32} className="hover:animate-spin" />
 						<span className="text-xl ml-2 font-mono font-semibold">dan_michell</span>
 					</div>
 				</button>
@@ -66,13 +57,13 @@ const Header: React.FC<Props> = (props: Props) => {
 
 			<div className="flex items-center gap-4">
 				<div className="sm:flex items-center gap-4 hidden">
-					<button className="hover:scale-110 transition-all duration-200">
-						<a href="#blog">Blog</a>
+					<button className="hover:scale-110 duration-200">
+						<NoScrollLink href="blog">Blog</NoScrollLink>
 					</button>
-					<button className="hover:scale-110 transition-all duration-200">
-						<a href="#work">Work</a>
+					<button className="hover:scale-110 duration-200">
+						<NoScrollLink href="projects">Projects</NoScrollLink>
 					</button>
-					<button className="hover:scale-110 transition-all duration-200">
+					<button className="hover:scale-110 duration-200">
 						<a
 							className="flex gap-1 items-center"
 							href="https://github.com/dan-michell/min-page"
@@ -88,29 +79,29 @@ const Header: React.FC<Props> = (props: Props) => {
 					<div>
 						<div className="relative">
 							<button
+								className="border-[1px] dark:border-lightish border-darkish rounded-xl hover:dark:bg-darkish-highlight hover:bg-lightish-highlight h-10 w-10 flex justify-center items-center"
 								onClick={() => {
 									setDropdown(!dropdown);
 								}}
-								// onBlur={() => {
-								//   setDropdown(false);
-								// }}
-								className="p-[11px] border-[1px] dark:border-gray-700 rounded-xl hover:dark:bg-gray-900 hover:bg-gray-100"
 							>
-								<FiMenu size={16} />
+								<FiMenu size={18} />
 							</button>
 							<ul
 								className={`absolute ${
 									dropdown ? "" : "hidden"
-								} py-2 border-[1px] bg-black dark:border-gray-700 list-none rounded-lg shadow-lg mt-2 left-[-90px] w-48`}
+								} py-2 list-none rounded-lg shadow-lg mt-2 left-[-90px] w-48 backdrop-blur-lg`}
+								onMouseLeave={() => {
+									setDropdown(false);
+								}}
 							>
 								<li>
 									<button className="text-sm  px-6 w-full hover:scale-110 transition-all duration-200">
-										<a href="#blog">Blog</a>
+										<NoScrollLink href="blog">Blog</NoScrollLink>
 									</button>
 								</li>
 								<li>
 									<button className="text-sm px-6 mt-3 w-full hover:scale-110 transition-all duration-200">
-										<a href="#work">Work</a>
+										<NoScrollLink href="projects">Projects</NoScrollLink>
 									</button>
 								</li>
 								<li>
@@ -132,8 +123,11 @@ const Header: React.FC<Props> = (props: Props) => {
 				</div>
 				<button
 					className={
-						"p-2 rounded-xl bg-slate-800 text-gray-200 dark:bg-orange-300 dark:text-gray-900 hover:bg-slate-900 hover:dark:bg-orange-200"
+						"p-2 rounded-xl bg-darkish text-lightish dark:text-darkish dark:bg-orange-300 hover:bg-darkish-highlight hover:dark:bg-orange-200 h-10 w-10 flex justify-center items-center"
 					}
+					onClick={() => {
+						setTheme(theme == "dark" ? "light" : "dark");
+					}}
 				>
 					{renderThemeChanger()}
 				</button>
