@@ -45,7 +45,7 @@ const Header: React.FC<Props> = (props: Props) => {
 	};
 
 	return (
-		<div className="w-full sm:max-w-[900px] px-4 py-3 flex justify-between items-center sticky top-0 z-50 backdrop-blur-lg">
+		<div className="w-full sm:max-w-[900px] px-4 py-3 flex justify-between items-center sticky top-0 z-50 backdrop-blur-lg border-b-[1px] dark:border-darkish-highlight border-lightish-highlight">
 			<NoScrollLink href="/">
 				<button>
 					<div className="flex items-center">
