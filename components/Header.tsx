@@ -49,7 +49,7 @@ const Header: React.FC<Props> = (props: Props) => {
 			<NoScrollLink href="/">
 				<button>
 					<div className="flex items-center">
-						<PiPersonSimpleBike size={32} className="hover:animate-spin" />
+						<PiPersonSimpleBike size={32} className="hover:scale-110 duration-200" />
 						<span className="text-xl ml-2 font-mono font-semibold">dan_michell</span>
 					</div>
 				</button>
