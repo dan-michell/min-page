@@ -25,8 +25,10 @@ module.exports = {
       colors: {
         'darkish': '#121212',
         'darkish-highlight': '#1c1c1c',
+        'darkish-light': '#2b2b2b',
         'lightish': '#DDDDDD',
-        'lightish-highlight': '#d4d4d4'
+        'lightish-highlight': '#d4d4d4',
+        'lightlish-light': '#bebebe', 
       }
     },
   },

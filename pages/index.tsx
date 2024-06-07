@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import type { NextPage } from "next";
-import Image from "next";
 import NoScrollLink from "../components/NoScrollLink";
 import Layout from "../components/Layout";
 import Welcome from "../components/Welcome";
