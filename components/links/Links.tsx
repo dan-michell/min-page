@@ -6,7 +6,7 @@ type Props = {};
 
 const Links: React.FC<Props> = (props: Props) => {
 	return (
-		<div className="flex gap-5 mt-4">
+		<div className="flex gap-5">
 			<a href="https://www.linkedin.com/in/dan-michell/" target="_blank" rel="noreferrer">
 				<BsLinkedin size={24} className="hover:scale-110 transition-all" />
 			</a>

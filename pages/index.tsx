@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import type { NextPage } from "next";
-import NoScrollLink from "../components/NoScrollLink";
 import Layout from "../components/Layout";
-import Welcome from "../components/Welcome";
-import About from "../components/About";
-import Blog from "../components/Blog";
+import Welcome from "../components/home/Welcome";
+import About from "../components/home/About";
+import FeaturedPosts from "components/home/FeaturedPosts";
 
 const Home: NextPage = () => {
 	return (
@@ -13,6 +12,7 @@ const Home: NextPage = () => {
 				<div className="sm:max-w-[600px] flex flex-col items-center sm:items-start">
 					<Welcome />
 					<About />
+					<FeaturedPosts />
 				</div>
 			</div>
 		</Layout>
