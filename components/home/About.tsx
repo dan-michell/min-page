@@ -8,7 +8,10 @@ type Props = {};
 
 const About: React.FC<Props> = (props: Props) => {
 	return (
-		<div id="about" className="w-[90%] sm:w-full mt-12 flex items-center gap-6">
+		<div
+			id="about"
+			className="w-[90%] sm:w-full mt-12 flex flex-col sm:flex-row items-center gap-6"
+		>
 			<Image
 				src={profileImage}
 				sizes="100vh"
