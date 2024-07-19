@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 
 import { FiMenu } from "react-icons/fi";
 import NoScrollLink from "../NoScrollLink";
@@ -8,6 +9,7 @@ type Props = {};
 
 const HeaderDropdown: React.FC<Props> = (props: Props) => {
 	const [dropdown, setDropdown] = useState(false);
+	const router = useRouter();
 
 	return (
 		<div className="flex justify-center sm:hidden">
@@ -30,8 +32,23 @@ const HeaderDropdown: React.FC<Props> = (props: Props) => {
 						}}
 					>
 						<li>
-							<button className="text-sm  px-6 w-full hover:scale-110 transition-all duration-200">
+							<button
+								className={
+									router.pathname == "/"
+										? "text-sm  px-6 w-full hover:scale-110 transition-all duration-200"
+										: "hidden"
+								}
+							>
 								<NoScrollLink href="blog">Blog</NoScrollLink>
+							</button>
+							<button
+								className={
+									router.pathname == "/blog"
+										? "text-sm  px-6 w-full hover:scale-110 transition-all duration-200"
+										: "hidden"
+								}
+							>
+								<NoScrollLink href="/">Home</NoScrollLink>
 							</button>
 						</li>
 						<li>
