@@ -1,10 +1,15 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Header from "../components/header/Header";
 import Footer from "../components/Footer";
 import { AnimatePresence } from "framer-motion";
 import { ThemeProvider } from "next-themes";
+
+enum Page {
+	Index,
+	Other,
+}
 
 function MyApp({ Component, pageProps, router }: AppProps) {
 	return (
