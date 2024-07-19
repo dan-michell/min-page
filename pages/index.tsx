@@ -9,7 +9,7 @@ const Home: NextPage = () => {
 	return (
 		<Layout>
 			<div className="flex justify-center">
-				<div className="sm:max-w-[600px] flex flex-col items-center sm:items-start">
+				<div className="sm:max-w-[600px] flex flex-col items-center sm:items-start gap-12">
 					<Welcome />
 					<About />
 					<FeaturedPosts />

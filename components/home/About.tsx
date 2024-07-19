@@ -8,14 +8,14 @@ type Props = {};
 
 const About: React.FC<Props> = (props: Props) => {
 	return (
-		<div id="about" className="w-[90%] sm:w-full mt-12 flex items-center gap-6">
+		<div id="about" className="w-[90%] sm:w-full flex flex-col sm:flex-row items-center gap-6">
 			<Image
 				src={profileImage}
 				sizes="100vh"
 				alt="Picture of the author"
 				className="aspect-square max-w-[124px] rounded-full border-[1px] border-lightish-light dark:border-darkish-light"
 			/>
-			<p className="font-light text-justify">
+			<div className="font-light text-justify">
 				Thank you for taking the time to look at my website! I'm currently working as a
 				software / data engineer at Omnicom Media Group, based in London. Please see below
 				for a couple featured blog posts or check out the{" "}
@@ -25,7 +25,7 @@ const About: React.FC<Props> = (props: Props) => {
 					</NoScrollLink>
 				}{" "}
 				page for further projects and me talking about technologies i'm exploring.
-			</p>
+			</div>
 		</div>
 	);
 };

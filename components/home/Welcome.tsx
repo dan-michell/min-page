@@ -8,7 +8,7 @@ type Props = {};
 
 const Welcome: React.FC<Props> = (props: Props) => {
 	return (
-		<div className="mt-8 whitespace-nowrap">
+		<div className="whitespace-nowrap mt-12">
 			<h1 className="font-semibold relative sm:text-9xl text-[112px] leading-[1]">
 				<div className="flex">Hello!</div>
 				I'm Dan.
